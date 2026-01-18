@@ -1,18 +1,30 @@
-// Program Pengelolaan Angkot 
+let penumpang  = ['juan', undefined, 'kamui']
 
-let namaPenumpang = ['Juan', undefined, 'udin']
+function tambahPenumpang(nama, penumpang) {
 
-function tambahPenumpang(penumpang, nama) {
-for(let i = 0; i < namaPenumpang.length ; i++){
-    if(namaPenumpang[i] === 0){
-        console.log('Penumpang Kosong')
+    if (penumpang.length === 0) {
+        penumpang.push(nama)
+        return penumpang
     }
-    else{
-        console.log("Penumpang Ada")
-    }
-} 
 
-} 
+    for (let i = 0; i < penumpang.length; i++) {
+
+        if (penumpang[i] === nama) {
+            console.log(nama, "sudah ada di dalam angkot")
+            return penumpang
+        }
+
+        if (penumpang[i] === undefined) {
+            penumpang[i] = nama
+            return penumpang
+        }
+
+        if (i === penumpang.length - 1) {
+            penumpang.push(nama)
+            return penumpang
+        }
+    }
+}
 
 function hapusPenumpang(){
 
@@ -22,4 +34,3 @@ function hapusPenumpang(){
 
 console.log("======SELAMAT DATANG DI ANGKOT JAGO=====")
 
-console.log(tambahPenumpang(namaPenumpang))
