@@ -1,0 +1,44 @@
+body {
+  /*background-color : #f9fafb;*/
+  margin : 0;
+  font-family : system-ui, sans-sherif;
+  line-height : 0.5;
+}
+
+.contener {
+  text-align : center;
+  background-color : beige;
+  border : 3px solid transparent;
+  margin-left: 15em;
+  margin-right: 15em;
+  border-radius: 0.6rem;
+}
+
+p {
+  font-size : 4rem;
+}
+
+h1{
+  font-size : 3rem;
+}
+
+button {
+  font-size : 1rem;
+  font-weight: 500;
+  padding : 0.2em 1.0em;
+  border-radius: 0.6rem;
+  border : 1px solid transparent;
+  cursor : pointer;
+  line-height: 1;
+  background-color: rgb(0,255,0,1);
+  
+}
+
+button:hover{
+  background-color: green;
+  color : white;
+}
+
+button:active {
+  transform: translateY(1px);
+}
