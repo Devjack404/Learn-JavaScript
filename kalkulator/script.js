@@ -2,16 +2,19 @@ let inputPrevious = '';
 let inputOperator = '';
 let inputCurrent = '';
 
+function updateDisplay() {
+    document.getElementById('display').value =`${inputPrevious} ${inputOperator} ${inputCurrent}`.trim();
+}
 
 function clearButton () {
-    inputCurrent = '';
+    inputPrevious = '';
     inputOperator = '';
     inputCurrent = '';
-    document.getElementsByClassName()
+    updateDisplay();
 }
 
 
 function appendNumber(number){
-    document.getElementById('display').value = `${inputPrevious} ${inputOperator} ${inputCurrent}`;
     inputCurrent += number;
+    updateDisplay();
 }
