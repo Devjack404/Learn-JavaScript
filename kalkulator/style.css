@@ -16,9 +16,11 @@ body {
     background-color: beige;
     border-radius: 0.5em;
     border: 1px solid #ccc;
-    width: 80%;
-    max-width: 360px;
+    width: 90%;
+    max-width: 250px;
+    padding: 1em;
 }
+
 
 #display{
     background-color : blanchedalmond;
@@ -26,10 +28,24 @@ body {
     text-align: center;
     border: 2px solid;
     border-radius: 0.5em;
-    width : 70%;
+    width : 90%;
+}
+
+.button-calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap : 0.5em;
+    width: 100%;
+    padding : 1em;
 }
 
 .first-row {
     background-color: red;
+
     
+}
+
+.second-row{
+    background-color: blue;
+    ;
 }
