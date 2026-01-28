@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin : 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    background-color: beige;
+    border-radius: 0.5em;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 360px;
+}
+
+#display{
+    background-color : blanchedalmond;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 0.5em;
+    width : 70%;
+}
+
+.first-row {
+    background-color: red;
+    
+}
