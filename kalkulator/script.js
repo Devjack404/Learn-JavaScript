@@ -25,8 +25,12 @@ function appendOperators (operator) {
     inputPrevious = inputCurrent;
     inputOperator = operator;
     inputCurrent = "";
+    updateDisplay(); 
+}
+
+function deleteNumber(){
+    inputCurrent = inputCurrent.slice(0, -1);
     updateDisplay();
-    
 }
 
 
@@ -62,6 +66,6 @@ function calculate(){
     updateDisplay();
 }
 
-function equal(hasil){
+function equal(){
     console.log(calculate())
 }
