@@ -4,6 +4,7 @@ let inputCurrent = '';
 
 function updateDisplay() {
     document.getElementById('display').value =`${inputPrevious} ${inputOperator} ${inputCurrent}`.trim();
+    console.log(`${inputPrevious} ${inputOperator} ${inputCurrent}`)
 }
 
 function clearButton () {
@@ -59,4 +60,8 @@ function calculate(){
     inputPrevious = '';
     inputCurrent = '';
     updateDisplay();
+}
+
+function equal(hasil){
+    console.log(calculate())
 }
