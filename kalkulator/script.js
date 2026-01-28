@@ -4,7 +4,6 @@ let inputCurrent = '';
 
 function updateDisplay() {
     document.getElementById('display').value =`${inputPrevious} ${inputOperator} ${inputCurrent}`.trim();
-    console.log(`${inputPrevious} ${inputOperator} ${inputCurrent}`)
 }
 
 function clearButton () {
@@ -29,7 +28,15 @@ function appendOperators (operator) {
 }
 
 function deleteNumber(){
-    inputCurrent = inputCurrent.slice(0, -1);
+    if(inputCurrent !== ""){
+        inputCurrent = inputCurrent.slice(0, -1);
+    }
+    else if(inputOperator !== ""){
+        inputOperator = "";    
+    }
+    else if(inputPrevious !== "") {
+       inputPrevious = inputPrevious.slice(0, -1); 
+    } 
     updateDisplay();
 }
 
@@ -60,7 +67,7 @@ function calculate(){
             return;
     }
 
-    inputOperator = result;
+    inputOperator = String(result);
     inputPrevious = '';
     inputCurrent = '';
     updateDisplay();
