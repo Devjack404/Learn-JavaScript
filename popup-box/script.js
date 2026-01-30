@@ -1,18 +1,21 @@
 let open_button = document.getElementById('popup_button');
-
 let closed_button = document.getElementById('closed_button');
+let popup = document.querySelector('.popup');
+let overlay = document.querySelector(".overlay") 
 
-let popup = document.querySelector('.popup'); 
 
-
+//button ketika aktif
 open_button.addEventListener("click", () => {
-    popup.style.display = "block";
-    document.body.style.backgroundColor = "grey";
+    popup.classList.add("active");
+    overlay.classList.add("active")
+    document.body.classList.add("dim");
     open_button.style.display = "none";
 });
 
+//butoon ketika off
 closed_button.addEventListener("click", () => {
-    popup.style.display = "none"
-    document.body.style.backgroundColor = "white";
-    open_button.style.display = "inline"
+    popup.classList.remove("active"); 
+    overlay.classList.remove("active")
+    document.body.classList.remove("dim");
+    open_button.style.display = "inline";
 })
