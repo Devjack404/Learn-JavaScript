@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 2em;
+    text-align: center;
+}
+
+.wrapper{
+    background-color:aquamarine;
+
+}
+
+.score-board {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap : 1em;
+}
