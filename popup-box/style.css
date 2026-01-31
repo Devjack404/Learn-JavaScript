@@ -4,6 +4,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     justify-content: center;
+    background-color: burlywood;
 }
 
 .overlay {
@@ -35,9 +36,19 @@ body {
 }
 
 .popup.active {
-    display: block; 
+    display: block;
+    background-color: rgb(216, 187, 148);
+    text-align: center; 
+    justify-content: center;
 }
 
 body.dim .content {
     filter: blur(2px);
+}
+
+
+button{
+    border: 0.5em solid transparent;
+    border-radius: 1em;
+    background-color: rgb(255, 148, 71);
 }
