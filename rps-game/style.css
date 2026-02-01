@@ -8,10 +8,12 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 2em;
     text-align: center;
+    background-color : white;
 }
 
 .wrapper{
     background-color:aquamarine;
+    position : relative;
 
 }
 
@@ -20,4 +22,10 @@ body {
     text-align: center;
     justify-content: center;
     gap : 1em;
+}
+
+button {
+ border : 0.5em solid transparent;
+ border-radius : 1em;
+ background-color : yellow; 
 }

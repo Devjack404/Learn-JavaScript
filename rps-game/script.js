@@ -2,7 +2,7 @@ let UserScore = document.querySelector('.userScore');
 let computerScore = document.querySelector('.computerScore');
 let userChoice;
   
-function choice (userChoice){
+function Choice (userChoice){
  if(userChoice === "Rock") {
     console.log("User memilih rock")
  }
@@ -12,9 +12,14 @@ function choice (userChoice){
  else if(userChoice === "Scissors") {
     console.log("User memilih scissors")
  }
-  return userChoice;
 }
 
 
+//function computer play
+function computerChoice (){
+  const choice = ['Rock', 'Paper', 'Scissors']
+  const randomChoice = Math.floor(Math.random() * choice.length);
+  return choice[randomChoice];
+}
 
 
