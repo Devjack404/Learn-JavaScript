@@ -55,16 +55,16 @@ function play(UserChoice){
 }
 
 // 
-function do(){
-  rock_btn.addEvenListener('click' function () {
+function doThing(){
+  rock_button.addEventListener('click', function () {
     play('rock')
     console.log('User choose rock')
   });
-  paper_btn.addEvenListener('click' function () {
+  paper_button.addEventListener('click', function () {
     play('paper') 
     console.log('User choose paper')
   });
-  scissors_btn.addEvenListener('click' function () {
+  scissors_button.addEventListener('click', function () {
     play('scissors')  
     console.log('User choose scissors')
   });
@@ -79,3 +79,5 @@ function computerChoice (){
   return choice[randomChoice];
 }
 
+
+doThing();
