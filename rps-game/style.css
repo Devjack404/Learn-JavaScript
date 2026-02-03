@@ -4,17 +4,22 @@
 
 
 body {
+    display : flex;
     margin: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 2em;
     text-align: center;
     background-color : white;
+    align-items : center;
+    justify-content : center;
 }
 
 .wrapper{
     background-color:aquamarine;
     position : relative;
-
+    border : 0.5em solid grey;
+    max-width : 320px; 
+    width : 100%;
 }
 
 .score-board {
