@@ -29,6 +29,7 @@ function lose(userChoice, comChoice) {
 function draw(userChoice, comChoice) {
   UserScore_span.innerHTML = userScore;
   ComputerScore_span.innerHTML = comScore;
+  
 }
 
 
@@ -40,33 +41,35 @@ function play(UserChoice){
     case "paperrock":
     case "scissorspaper":
       win(UserChoice, ComChoice);
+      console.log(`Com : ${ComChoice}, User : ${UserChoice}`)
+      console.log("You Win")
       break;
     case "rockpaper":
     case "paperscissors":
     case "scissorsrock":
       lose(UserChoice, ComChoice); 
+      console.log(`Com : ${ComChoice}, User : ${UserChoice}`)
+      console.log("You Lose")
       break;
     case "rockrock":
     case "paperpaper":
     case "scissorsscissors":
-      draw(UserChoice, ComChoice) 
+      draw(UserChoice, ComChoice);
+      console.log("Draw")
       break;
   }
 }
 
 // 
 function doThing(){
-  rock_button.addEventListener('click', function () {
+  rock_button.addEventListener('click', function () { 
     play('rock')
-    console.log('User choose rock')
   });
   paper_button.addEventListener('click', function () {
     play('paper') 
-    console.log('User choose paper')
   });
   scissors_button.addEventListener('click', function () {
     play('scissors')  
-    console.log('User choose scissors')
   });
 }
 
