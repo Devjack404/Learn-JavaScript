@@ -34,3 +34,8 @@ button {
  border-radius : 1em;
  background-color : yellow; 
 }
+
+
+result_popup {
+  background-color : blue;
+}

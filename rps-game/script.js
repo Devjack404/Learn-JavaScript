@@ -1,6 +1,7 @@
 //varibel for value score
 let userScore = 0;
 let comScore = 0;
+let result_popup = document.getElementById('popup');
 
 //variabel to define type of button
 let rock_button = document.getElementById('rock_btn') 
@@ -16,6 +17,7 @@ function win(userChoice, comChoice) {
   userScore++;
   UserScore_span.innerHTML = userScore;
   ComputerScore_span.innerHTML = comScore;
+  result_popup.innerHTML = `<h1 class="text_win">You win!</h1> <span>close</span>`
 }
 
 // a function to check who's lose
