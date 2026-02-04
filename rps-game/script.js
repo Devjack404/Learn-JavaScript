@@ -1,37 +1,61 @@
 //varibel for value score
 let userScore = 0;
 let comScore = 0;
-let result_popup = document.getElementById('popup');
+let closeBtn;
+
 
 //variabel to define type of button
 let rock_button = document.getElementById('rock_btn') 
 let paper_button = document.getElementById('paper_btn')
 let scissors_button = document.getElementById('scissors_btn')
 
-//variabel for ever tag in html
+//variabel for every tag in html
 let UserScore_span = document.getElementById('userScore');
 let ComputerScore_span = document.getElementById('computerScore');
+let modal = document.getElementById('modal');
+let result = document.querySelector('.modal_content');
+
 
 //a function to check who's the winner 
 function win(userChoice, comChoice) {
   userScore++;
   UserScore_span.innerHTML = userScore;
   ComputerScore_span.innerHTML = comScore;
-  result_popup.innerHTML = `<h1 class="text_win">You win!</h1> <span>close</span>`
+  modal.style.display= 'flex';
+  result.innerHTML = 
+  `<h1 class="text_win">You win!</h1> 
+  <button class="closeBtn">close</button>`;
 }
+
+//function to close popup modal 
+modal.addEventListener('click', function(e) {
+  if(e.target == modal){
+    modal.style.display = 'none';
+  }
+  else if (e.target.classList.contains('closeBtn')) {
+    modal.style.display = 'none';
+  }
+});
 
 // a function to check who's lose
 function lose(userChoice, comChoice) {
   comScore++;
   UserScore_span.innerHTML = userScore;
   ComputerScore_span.innerHTML = comScore;
+  modal.style.display= 'flex';
+  result.innerHTML = 
+  `<h1 class="text_win">You Lose!</h1> 
+  <button class="closeBtn">close</button>`;
 }
 
 // a function to tell draw choice
 function draw(userChoice, comChoice) {
   UserScore_span.innerHTML = userScore;
   ComputerScore_span.innerHTML = comScore;
-  
+  modal.style.display= 'flex';
+  result.innerHTML = 
+  `<h1 class="text_win">Draw!</h1> 
+  <button class="closeBtn">close</button>`;  
 }
 
 

@@ -20,6 +20,7 @@ body {
     border : 0.5em solid grey;
     max-width : 320px; 
     width : 100%;
+    z-index : 10;
 }
 
 .score-board {
@@ -35,7 +36,3 @@ button {
  background-color : yellow; 
 }
 
-
-result_popup {
-  background-color : blue;
-}
