@@ -14,7 +14,7 @@ let UserScore_span = document.getElementById('userScore');
 let ComputerScore_span = document.getElementById('computerScore');
 let modal = document.getElementById('modal');
 let result = document.querySelector('.modal_content');
-
+let wrapper = document.querySelector('.wrapper');
 
 //a function to check who's the winner 
 function win(userChoice, comChoice) {
@@ -32,6 +32,7 @@ modal.addEventListener('click', function(e) {
   if(e.target == modal){
     modal.style.display = 'none';
   }
+
   else if (e.target.classList.contains('closeBtn')) {
     modal.style.display = 'none';
   }

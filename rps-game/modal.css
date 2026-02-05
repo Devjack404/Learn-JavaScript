@@ -1,7 +1,7 @@
 #modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 11;
   left: 0;
   top: 0;
   height: 100%;
@@ -27,4 +27,9 @@
   animation-name: modalopen;
   animation-duration: 1s; 
   align-self: center; 
+}
+
+.wrapper.active {
+  filter : blur(2px);
+  /* display : none; */
 }
