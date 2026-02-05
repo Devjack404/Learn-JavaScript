@@ -3,11 +3,11 @@ let userScore = 0;
 let comScore = 0;
 let closeBtn;
 
-
 //variabel to define type of button
-let rock_button = document.getElementById('rock_btn') 
-let paper_button = document.getElementById('paper_btn')
-let scissors_button = document.getElementById('scissors_btn')
+let rock_button = document.getElementById('rock_btn');
+let paper_button = document.getElementById('paper_btn');
+let scissors_button = document.getElementById('scissors_btn');
+let restart_button = document.querySelector('.restart');
 
 //variabel for every tag in html
 let UserScore_span = document.getElementById('userScore');
@@ -100,8 +100,6 @@ function doThing(){
   });
 }
 
-
-
 //function computer play
 function computerChoice (){
   const choice = ['rock', 'paper', 'scissors']
@@ -109,5 +107,13 @@ function computerChoice (){
   return choice[randomChoice];
 }
 
+
+//function arrow to restart score
+restart_button.addEventListener('click', () => {
+  userScore = 0;
+  comScore = 0;
+  UserScore_span.innerHTML = userScore;
+  ComputerScore_span.innerHTML = comScore;
+})
 
 doThing();
