@@ -13,7 +13,9 @@ body {
     justify-content : center;
     align-items : center;
     min-height : 100vh;
+    flex-direction : column;
 }
+
 
 .wrapper{
     background-color:aquamarine;
@@ -22,6 +24,10 @@ body {
     width : 100%;
     z-index : 10;
     border-radius : 1em;
+}
+
+#title{
+  margin-bottom : 2em;
 }
 
 .score-board {
@@ -37,3 +43,6 @@ button {
  background-color : yellow; 
 }
 
+.restart {
+ margin-top : 2em;
+}
