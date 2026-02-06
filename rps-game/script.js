@@ -87,7 +87,7 @@ function play(UserChoice){
   }
 }
 
-// 
+//to execute the choice use play function 
 function doThing(){
   rock_button.addEventListener('click', function () { 
     play('rock')
