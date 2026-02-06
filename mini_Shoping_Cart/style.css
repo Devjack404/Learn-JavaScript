@@ -1,42 +1,59 @@
 * {
- box-sizing : border-box; 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color : rgb(235,226,216);
-    display : flex;
-    margin: 0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 2em;
-    text-align: center;
-    justify-content : center;
-    align-items : center;
-    min-height : 100vh;
-    flex-direction : column;
+  background-color: rgb(235,226,216);
+  font-family: 'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif;
+  line-height: 1.6;
+  text-align: center;
 }
 
-.Navbar {
-  display : flex;
-  gap : 3rem;
-  list-style-type: none;
-  width : 100%;
-  justify-content : center;
-  text-align : center;
-  /* align-items : center; */
+/*Navbar*/
+.navbar {
+  width: 100%;
+  padding: 1rem 0;
 }
 
-.cart_board {
-  display : flex;
-  border : 2px solid grey;
-  gap : 2rem;
-  width : 100%;
-  align-items : center;
-  justify-content : center;
-  /* padding-bottom : 20em;  */
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
 }
 
+/*Kontener */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Card Board*/
+.cart-board {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border: 2px solid grey;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Items Card*/
 .item {
-  border : 2px solid grey;
-  background-color : grey;
-  padding : 5rem;
+  border: 2px solid grey;
+  background-color: #999;
+  padding: 2rem;
+  width: 180px;
 }
+
+/* Button */
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+

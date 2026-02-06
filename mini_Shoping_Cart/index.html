@@ -3,30 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Shoping Cart</title>
+  <title>Mini Shopping Cart</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <nav class="Navbar">
-    <li><a href="index.html">Main</a></li>
-    <li><a href="cart.html">Cart</a></li>   
-  </nav>
- <h1>Welcome to Mini Shoping Cart</h1> 
- <p>Buy what you want.... !</p>
- <div class="cart_board">
-  <div class="item">
-    <h3>Items 1</h3>
-   <button>ADD TO CART</button>
-  </div>
-  <div class="item">
-    <h3>Items 2</h3>
-   <button>ADD TO CART</button>
-  </div>
-  <div class="item">
-    <h3>Items 3</h3>
-    <button>ADD TO CART</button>
-  </div>
- </div>
+<body> 
+  <header>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="index.html">Main</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Welcome to Mini Shopping Cart</h1>
+      <p>Buy what you want...</p>
+    </section>
+
+    <section class="cart-board">
+      <article class="item">
+        <h3>Item 1</h3>
+        <button type="button" class="add-btn">Add to Cart</button>
+      </article>
+
+      <article class="item">
+        <h3>Item 2</h3>
+        <button type="button" class="add-btn">Add to Cart</button>
+      </article>
+
+      <article class="item">
+        <h3>Item 3</h3>
+        <button type="button" class="add-btn">Add to Cart</button>
+      </article>
+    </section>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
+
