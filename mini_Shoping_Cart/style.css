@@ -1,0 +1,21 @@
+* {
+ box-sizing : border-box; 
+}
+
+body {
+    background-color : rgb(235,226,216);
+    display : flex;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 2em;
+    text-align: center;
+    justify-content : center;
+    align-items : center;
+    min-height : 100vh;
+    flex-direction : column;
+}
+
+.cart_board {
+  display : flex;
+  border : 2px solid grey;
+}
