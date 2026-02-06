@@ -15,7 +15,28 @@ body {
     flex-direction : column;
 }
 
+.Navbar {
+  display : flex;
+  gap : 3rem;
+  list-style-type: none;
+  width : 100%;
+  justify-content : center;
+  text-align : center;
+  /* align-items : center; */
+}
+
 .cart_board {
   display : flex;
   border : 2px solid grey;
+  gap : 2rem;
+  width : 100%;
+  align-items : center;
+  justify-content : center;
+  /* padding-bottom : 20em;  */
+}
+
+.item {
+  border : 2px solid grey;
+  background-color : grey;
+  padding : 5rem;
 }
