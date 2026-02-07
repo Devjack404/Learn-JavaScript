@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #007f63;
+  background-color: #e9f6d0;
   font-family: 'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif;
   line-height: 1.6;
   text-align: center;
@@ -37,17 +37,17 @@ body {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  border: 2px solid grey;
   padding: 2rem;
   margin-top: 2rem;
 }
 
 /* Items Card*/
 .item {
-  border: 2px solid grey;
-  background-color: #999;
+  /* border: transparent; */
+  background-color: #009053;
   padding: 2rem;
   width: 180px;
+  border-radius : 1rem;
 }
 
 /* Button */
@@ -55,5 +55,10 @@ button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+#desc {
+  color : white;
+  font-weight : bold; 
 }
 
