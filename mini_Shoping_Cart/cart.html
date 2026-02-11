@@ -4,22 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
 </head>
 <body>
-  <h2>Shoping Cart</h2>
-  <nav class="navbar_cart">
-    <li><a href="index.html">Main</a></li>
-    <li><a href="cart.html">Cart</a></li>   
-  </nav>
-
+  <header>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="index.html">Main</a></li>
+        <li><a href="cart.html">Cart</a></li>   
+      </ul>
+    </nav>  
+  </header>
+  <h2>Your Cart</h2>
+  
   <div class="cart_container">
-    <div>
-      <p>Drink : Sprite</p>  
-    </div> 
-    <div>
-      <p>Drink : Lemon</p>
-    </div>
-  </div>  
+    <table>
+      <thead>
+        <tr>
+          <th>PRODUCT</th>
+          <th>PRICE</th>
+          <th>QUANTITY</th>
+          <th>TOTAL</th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr>
+          <td>
+            <div class="product-info">
+              <img 
+              src="https://i.pinimg.com/736x/b9/b5/8e/b9b58e650966f44bbf652539a07f7bff.jpg" 
+              alt="Pic Lemon Soda"
+              style="width : 100px;">
+              <div>
+                <h3>Lemon Soda</h3>
+                <p>Lemon</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+     </tbody>
+  </div>
+  <div class="order_container">
+    
+  </div>     
+  </table>
+
 </body>
 </html>

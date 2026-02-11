@@ -11,10 +11,24 @@ body {
   text-align: center;
 }
 
-/*Navbar*/
-.navbar_cart {
+.navbar {
   width: 100%;
   padding: 0.2rem 0;
   border-radius : 0.5rem;
   background-color : #009053;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  padding : 0.5rem;
+  text-align : center;
+}
+
+a{
+  color : white;
+  font-weight : bold;
+  text-decoration : none;
 }
