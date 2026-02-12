@@ -5,19 +5,19 @@ let orginJuice = document.querySelector(".orginJuice");
 let addItems = [""];
 
 lemon.addEventListener('click', () => {
-  lemon = "lemon";
+  lemon = ["lemon"];
   addItems += lemon;
   console.log(addItems);
 })
 
 sprite.addEventListener('click', () => {
-  sprite = "sprite";
+  sprite = ["sprite"];
   addItems += sprite;
   console.log(addItems);
 })
 
 orginJuice.addEventListener('click', () => {
-  orginJuice = "juice";
+  orginJuice = ["juice"];
   addItems += orginJuice;
   console.log(addItems);
 })
