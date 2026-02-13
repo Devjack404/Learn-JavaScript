@@ -1,23 +1,25 @@
+// variables in index.html
 let lemon = document.querySelector(".lemonSoda");
 let sprite = document.querySelector(".sprite");
 let orginJuice = document.querySelector(".orginJuice");
 
-let addItems = [""];
+// cart var 
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+//function addItemsCart
+function addItemsCart(itemName) {
+  cart.push(itemName) 
+  console.log(itemName)
+}
 
 lemon.addEventListener('click', () => {
-  lemon = ["lemon"];
-  addItems += lemon;
-  console.log(addItems);
+  addItemsCart("Lemon Soda")
 })
 
 sprite.addEventListener('click', () => {
-  sprite = ["sprite"];
-  addItems += sprite;
-  console.log(addItems);
+  addItemsCart("Sprite")
 })
 
 orginJuice.addEventListener('click', () => {
-  orginJuice = ["juice"];
-  addItems += orginJuice;
-  console.log(addItems);
+ addItemsCart("Orgin Juice")
 })
