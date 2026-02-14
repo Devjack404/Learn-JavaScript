@@ -13,13 +13,15 @@ function addItemsCart(itemName) {
 }
 
 lemon.addEventListener('click', () => {
-  addItemsCart("Lemon Soda")
+  addItemsCart("Lemon Soda");
 })
 
 sprite.addEventListener('click', () => {
-  addItemsCart("Sprite")
+  addItemsCart("Sprite");
 })
 
 orginJuice.addEventListener('click', () => {
- addItemsCart("Orgin Juice")
+ addItemsCart("Orgin Juice");
 })
+
+
