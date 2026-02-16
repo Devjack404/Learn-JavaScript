@@ -7,7 +7,7 @@ items_display.forEach(row => {
   let remove_btn = row.querySelector('.remove-btn');
   let quantity_display = row.querySelector('.quantity_num');
   let quantity_value = 1;
-
+  let 
   //function update quantity
   function update_quantity(){
     quantity_display.innerHTML = quantity_value;
