@@ -3,6 +3,7 @@ let lemon = document.querySelector(".lemonSoda");
 let sprite = document.querySelector(".sprite");
 let orginJuice = document.querySelector(".orginJuice");
 
+const buttonsAddCart = document.querySelectorAll('.add-btn')
 
 //JSON products 
 const products = [
@@ -26,28 +27,27 @@ const products = [
   }
 ];
 
-const container = document.querySelector('.cart-board')
-
+// const container = document.querySelector('.cart-board');
 
 // cart var 
 let cart = [];
 
+
+//function to add product into cart
+buttonsAddCart.forEach(button => {
+  button.addEventListener('click', (e) => {
+    const id = parseInt(e.target.dataset.id);
+    const product = products.find(item => item.id === id);
+    
+    addItemsCart(product) 
+  })  
+});
+
 //function addItemsCart
-function addItemsCart(itemName) {
-  cart.push(itemName) 
-  console.log(itemName)
+function addItemsCart(product) {
+  cart.push(product) 
+  console.log(cart)
 }
 
-lemon.addEventListener('click', () => {
-  addItemsCart("Lemon Soda");
-})
-
-sprite.addEventListener('click', () => {
-  addItemsCart("Sprite");
-})
-
-orginJuice.addEventListener('click', () => {
- addItemsCart("Orgin Juice");
-})
 
 
