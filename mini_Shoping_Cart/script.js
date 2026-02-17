@@ -30,22 +30,31 @@ const products = [
 // const container = document.querySelector('.cart-board');
 
 // cart var 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 
-//function to add product into cart
+//function when click button to add product into the cart
 buttonsAddCart.forEach(button => {
   button.addEventListener('click', (e) => {
     const id = parseInt(e.target.dataset.id);
     const product = products.find(item => item.id === id);
-    
-    addItemsCart(product) 
+
+    addItemsCart(product); 
   })  
 });
 
 //function addItemsCart
 function addItemsCart(product) {
-  cart.push(product) 
+const existing_product = cart.find(item => item.id === product.id)
+
+  if(existing_product){
+    existing_product.quantity += 1;
+  }
+  else{
+    cart.push({...product, quantity : 1});
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
   console.log(cart)
 }
 
