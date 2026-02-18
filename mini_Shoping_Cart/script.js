@@ -2,7 +2,6 @@
 let lemon = document.querySelector(".lemonSoda");
 let sprite = document.querySelector(".sprite");
 let orginJuice = document.querySelector(".orginJuice");
-
 const buttonsAddCart = document.querySelectorAll('.add-btn')
 
 //JSON products 
@@ -27,9 +26,8 @@ const products = [
   }
 ];
 
-// const container = document.querySelector('.cart-board');
 
-// cart var 
+// cart variable 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 
