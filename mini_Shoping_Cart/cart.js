@@ -33,8 +33,8 @@ function renderCart() {
     let inc_sign = row.querySelector('.inc-sign');
     let dec_sign = row.querySelector('.dec-sign');
     let remove_btn = row.querySelector('.remove-btn');
-    // let quantity_display = row.querySelector('.quantity_num');
-    // let quantity_value = 1;
+    let quantity_display = row.querySelector('.quantity_num');
+    let quantity_value = 1;
 
     //function update quantity
     function update_quantity(){
@@ -61,6 +61,14 @@ function renderCart() {
     remove_btn.addEventListener('click', ()=> {
      row.remove();
     });
-
+    
+    cartBody.appendChild(row);
   });
 }
+
+function updateCary() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+}
+
+renderCart();
