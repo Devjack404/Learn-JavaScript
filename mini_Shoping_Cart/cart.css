@@ -4,6 +4,8 @@
   --green-mid: #1fad72;
   --green-light: #52e0a5;
   --green-soft: #a8f0d2;
+  --green-soft-mid: #aee052;
+  --green-brigth: #a8f0d2;
 
   --bg-main: #e9f6d0;
   --white: #ffffff;
@@ -63,7 +65,7 @@ h2 {
 
 /* CONTAINER */
 .cart_container {
-  background: var(--white);
+  background: var(--green-soft-mid);
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
@@ -74,10 +76,13 @@ h2 {
 table {
   width: 100%;
   border-collapse: collapse;
+  background: var(--bg-main);
+  border-radius : 1em;
+
 }
 
 thead {
-  background: var(--green-soft);
+  background: var(--green-brigth);
 }
 
 th {
@@ -86,6 +91,7 @@ th {
   font-size: 13px;
   letter-spacing: 0.6px;
   color: var(--green-dark);
+  justify-content : space-between;
 }
 
 td {
