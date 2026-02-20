@@ -5,7 +5,7 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 function renderCart() {
   cartBody.innerHTML = "";
 
-  cart.forEach(item => {
+  cart.forEach((item, index) => {
     const row = document.createElement('tr');
 
     row.innerHTML = `
@@ -34,7 +34,7 @@ function renderCart() {
     let dec_sign = row.querySelector('.dec-sign');
     let remove_btn = row.querySelector('.remove-btn');
     let quantity_display = row.querySelector('.quantity_num');
-    let quantity_value = 1;
+    let quantity_value = item.quantity;
 
     //function update quantity
     function update_quantity(){
@@ -44,7 +44,8 @@ function renderCart() {
     //function to increas value +1
     inc_sign.addEventListener('click', ()=> {
       quantity_value++;
-      update_quantity();
+      item.quantity = quantity_value;
+      updateCart();     
       console.log(quantity_value);
     })
     
@@ -52,21 +53,22 @@ function renderCart() {
     dec_sign.addEventListener('click', ()=> {
       if(quantity_value > 1){
         quantity_value--;
+        item.quantity = quantity_value;
+        updateCart();
       }
-      update_quantity();
       console.log(quantity_value);
     })
      
     //function to delete items in cart
     remove_btn.addEventListener('click', ()=> {
-     row.remove();
+    cart.splice(index, 1);
+    updateCart();
     });
-    
-    cartBody.appendChild(row);
+     cartBody.appendChild(row);
   });
 }
 
-function updateCary() {
+function updateCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
     renderCart();
 }
