@@ -85,6 +85,11 @@ thead {
   background: var(--green-brigth);
 }
 
+tr{
+  width : 100%;
+  border-radius : 1em; 
+}
+
 th {
   text-align: left;
   padding: 14px;
@@ -98,6 +103,7 @@ td {
   padding: 18px 14px;
   border-bottom: 1px solid var(--border-soft);
 }
+
 
 /* PRODUCT INFO */
 .product-info {
