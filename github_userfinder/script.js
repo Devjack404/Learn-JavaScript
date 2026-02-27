@@ -1,8 +1,8 @@
 async function ambilData() {
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users")
+    const response = await fetch('https://api.github.com/users/kamranahmedse')
     const data = await response.json();
-    console.log(data);
+    return data; 
   }
   catch(error){
     console.log('Terjadi Kesalahan', error);
@@ -10,4 +10,21 @@ async function ambilData() {
 }
 
 
-ambilData()
+async function jalankan(){
+  const user = await ambilData();
+  console.log(user.login);
+  console.log(user.followers);
+}
+
+
+const findBtn = document.getElementById('findBtn');
+const name = document.getElementById('name') 
+
+findBtn.addEventListener('click', ()=> {
+  jalankan()
+})
+
+
+function checkDatas(){
+
+}
