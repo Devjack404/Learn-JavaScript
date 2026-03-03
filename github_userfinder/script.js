@@ -1,3 +1,4 @@
+// Function fetching api
 async function ambilData() {
   try {
     const response = await fetch('https://api.github.com/users/kamranahmedse')
@@ -16,10 +17,12 @@ async function jalankan(){
   console.log(user.followers);
 }
 
-
+// Variabel in HTML
 const findBtn = document.getElementById('findBtn');
 const name = document.getElementById('name') 
 
+
+// function click button
 findBtn.addEventListener('click', ()=> {
   jalankan()
 })
