@@ -1,7 +1,7 @@
 // Function fetching api
 async function ambilData() {
   try {
-    const response = await fetch('https://api.github.com/users/kamranahmedse')
+    const response = await fetch('https://api.github.com/users/kamranahmedse');
     const data = await response.json();
     return data; 
   }
@@ -19,15 +19,15 @@ async function jalankan(){
 
 // Variabel in HTML
 const findBtn = document.getElementById('findBtn');
-const name = document.getElementById('name') 
+const name = document.getElementById('name'); 
 
 
 // function click button
 findBtn.addEventListener('click', ()=> {
-  jalankan()
-})
+  jalankan();
+});
 
 
-function checkDatas(){
-
+function checkData(){
+  
 }
