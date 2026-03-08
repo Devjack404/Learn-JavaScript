@@ -1,3 +1,8 @@
+// Variabel in HTML
+const findBtn = document.getElementById('findBtn');
+const name = document.getElementById('name'); 
+let input = document.getElementById('input');
+
 // Function fetching api
 async function ambilData() {
   try {
@@ -9,25 +14,36 @@ async function ambilData() {
     console.log('Terjadi Kesalahan', error);
   }
 }
+  
 
-
-async function jalankan(){
-  const user = await ambilData();
+async function jalankan(user){
+  // const user = await ambilData();
   console.log(user.login);
   console.log(user.followers);
 }
 
-// Variabel in HTML
-const findBtn = document.getElementById('findBtn');
-const name = document.getElementById('name'); 
-
 
 // function click button
-findBtn.addEventListener('click', ()=> {
-  jalankan();
+findBtn.addEventListener('click', async ()=> {
+  const user = await ambilData();
+  let inputValue = input.value;
+  
+  if(inputValue === user.login || inputValue === user.id) { 
+    console.log(`User : ${user.login}`);
+    console.log(`Id : ${user.id}`);
+  }
+  else{
+    console.log("Data Tidak Ketemu");
+  }
 });
 
 
-function checkData(){
-  
-}
+// function checkInput(user){
+//   console.log(user.login.value);
+//   // if(input.value !== user.login.value) {
+//   //   console.log("Tidak ada data")
+//   // }
+//   // else{
+//   //   jalankan()
+//   // }
+// }
