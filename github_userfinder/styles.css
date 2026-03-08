@@ -32,3 +32,7 @@ h1{
 #findBtn {
   font-size: medium;
 }
+
+input {
+  text-align: center;
+}
