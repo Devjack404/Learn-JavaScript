@@ -16,34 +16,29 @@ async function ambilData() {
 }
   
 
-async function jalankan(user){
-  // const user = await ambilData();
-  console.log(user.login);
-  console.log(user.followers);
-}
-
-
 // function click button
 findBtn.addEventListener('click', async ()=> {
-  const user = await ambilData();
-  let inputValue = input.value;
+  let inputValue = input.value.trim();
   
-  if(inputValue === user.login || inputValue === user.id) { 
-    console.log(`User : ${user.login}`);
-    console.log(`Id : ${user.id}`);
+  if(!inputValue) { 
+    alert('Input Tidak Boleh Kosong !');
+    return;
   }
+
+  const user = await ambilData();
+
+  findBtn.textContent = "Mencari... ";
+  if(user){
+    if(inputValue === user.login || Number(inputValue) === user.id){
+      console.log(`User : ${user.login}`); 
+      console.log(`Id : ${user.id}`);
+      console.log(`Repos : ${user.repos_url}`);
+    }
+      findBtn.textContent = "selesai";  
+    }
   else{
-    console.log("Data Tidak Ketemu");
+    console.log('Data Tidak ditemukan...');
+    findBtn.textContent = "Data Tidak Ditemukan"
   }
 });
 
-
-// function checkInput(user){
-//   console.log(user.login.value);
-//   // if(input.value !== user.login.value) {
-//   //   console.log("Tidak ada data")
-//   // }
-//   // else{
-//   //   jalankan()
-//   // }
-// }
