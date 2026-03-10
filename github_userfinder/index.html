@@ -3,61 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub User Finder</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>Github User Finder</title>
+  <link rel="stylesheet" type="" href="styles.css"> 
 </head>
+
+<!-- Header -->
+<header>
+  <h1>Github User Finder</h1>
+</header>
+
+<!-- Body -->
 <body>
-
-  <main>
-    <header>
-      <h1>GitHub <span>User Finder</span></h1>
-      <p>Search any profile by username</p>
-    </header>
-
-    <div class="search-box">
-      <span class="at">@</span>
-      <input type="text" id="input" placeholder="username" autocomplete="off" spellcheck="false">
-      <button id="findBtn">Search</button>
-    </div>
-
-    <div class="loader" id="loader"></div>
-    <div class="error" id="error"></div>
-
-    <div class="result" id="result">
-      <div class="profile-top">
-        <img id="avatar" src="" alt="avatar">
-        <div>
-          <h2 id="name"></h2>
-          <p class="login" id="login"></p>
-          <p class="bio" id="bio"></p>
-        </div>
-      </div>
-
-      <div class="stats">
-        <div class="stat">
-          <span id="repos">—</span>
-          <label>Repos</label>
-        </div>
-        <div class="stat">
-          <span id="followers">—</span>
-          <label>Followers</label>
-        </div>
-        <div class="stat">
-          <span id="following">—</span>
-          <label>Following</label>
-        </div>
-      </div>
-
-      <div class="meta" id="meta"></div>
-
-      <a id="profile-link" href="#" target="_blank" rel="noopener">
-        View Profile →
-      </a>
-    </div>
-  </main>
-
-  <script src="script.js"></script>
+  <div class="container">
+    <label for="name">Account Name :</label>
+    <input type="text" id="input" placeholder="Enter Your User Name...">
+    <button type="button" id='findBtn'>Find Now</button>
+  </div> 
+   
+    <script src="script.js"></script>
 </body>
 </html>
