@@ -1,4 +1,0 @@
-Coba tambahkan loading indicator sederhana:
-
-Saat tombol diklik → button berubah teks jadi "Mencari..."
-Setelah data didapat → button kembali ke "Find Now"  
