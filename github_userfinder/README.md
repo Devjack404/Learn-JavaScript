@@ -5,7 +5,7 @@ You can find a user by **username or ID** and display their profile information.
 
 ---
 
-## 🚀 Preview
+## Preview
 
 <img src="./preview.png" alt="GitHub User Finder Preview" width="800">
 
@@ -29,5 +29,3 @@ You can find a user by **username or ID** and display their profile information.
 - GitHub API
 
 ---
-
-## 📂 Project Structure
