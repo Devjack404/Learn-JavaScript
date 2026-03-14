@@ -26,19 +26,19 @@ findBtn.addEventListener('click', async ()=> {
   }
 
   const user = await ambilData();
-  findBtn.textContent = "Mencari... ";
+  // findBtn.textContent = "Mencari... ";
 
   if(user){
     if(inputValue === user.login || Number(inputValue) === user.id){
       console.log(`User : ${user.login}`); 
       console.log(`Id : ${user.id}`);
       console.log(`Repos : ${user.repos_url}`);
-    }
       findBtn.textContent = "selesai";  
     }
-  else{
-    console.log('Data Tidak ditemukan...');
-    findBtn.textContent = "Data Tidak Ditemukan"
+    else {
+      console.log('Data Tidak ditemukan...');
+      findBtn.textContent = "Data Tidak Ditemukan"
+    }
   }
 });
 
