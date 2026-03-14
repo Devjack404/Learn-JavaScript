@@ -3,6 +3,7 @@ const findBtn = document.getElementById('findBtn');
 const name = document.getElementById('name'); 
 const input = document.getElementById('input');
 const username = document.querySelector('.username');
+const photo = document.querySelector('.photo');
 
 // Function fetching api
 async function ambilData() {
@@ -32,7 +33,7 @@ findBtn.addEventListener('click', async ()=> {
   if(user){
     if(inputValue === user.login || Number(inputValue) === user.id){
       username.textContent = `${user.login}`;
-      console.log(`Id : ${user.id}`);
+      photo.src = `${user.avatar_url}`
       console.log(`Repos : ${user.repos_url}`);
       findBtn.textContent = "selesai";  
     }
