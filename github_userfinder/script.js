@@ -1,12 +1,13 @@
 // Variabel in HTML
 const findBtn = document.getElementById('findBtn');
 const name = document.getElementById('name'); 
-let input = document.getElementById('input');
+const input = document.getElementById('input');
+const username = document.querySelector('.username');
 
 // Function fetching api
 async function ambilData() {
   try {
-    const response = await fetch('https://api.github.com/users/kamranahmedse');
+    const response = await fetch(`https://api.github.com/users/${input.value}`);
     const data = await response.json();
     return data; 
   }
@@ -30,7 +31,7 @@ findBtn.addEventListener('click', async ()=> {
 
   if(user){
     if(inputValue === user.login || Number(inputValue) === user.id){
-      console.log(`User : ${user.login}`); 
+      username.textContent = `${user.login}`;
       console.log(`Id : ${user.id}`);
       console.log(`Repos : ${user.repos_url}`);
       findBtn.textContent = "selesai";  
@@ -41,4 +42,6 @@ findBtn.addEventListener('click', async ()=> {
     }
   }
 });
+
+
 
