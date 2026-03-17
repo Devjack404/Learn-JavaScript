@@ -1,9 +1,10 @@
 // Variabel in HTML
 const findBtn = document.getElementById('findBtn');
-const name = document.getElementById('name'); 
+const nameTag = document.querySelector('.nameTag'); 
 const input = document.getElementById('input');
 const username = document.querySelector('.username');
 const photo = document.querySelector('.photo');
+const bio = document.querySelector('.bio');
 
 // Function fetching api
 async function ambilData() {
@@ -30,9 +31,11 @@ findBtn.addEventListener('click', async ()=> {
   const user = await ambilData();
 
   if(user){
-    if(inputValue === user.login || Number(inputValue) === user.id){
-      username.textContent = `${user.login}`;
-      photo.src = `${user.avatar_url}`
+    if(inputValue === user.login){
+      username.textContent = `${user.login}`; 
+      photo.src = `${user.avatar_url}`;
+      nameTag.textContent = `@${user.name}`;
+      bio.textContent = `${user.bio}`
       console.log(`Repos : ${user.repos_url}`);
       findBtn.textContent = "selesai";  
     }

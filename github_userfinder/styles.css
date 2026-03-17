@@ -153,6 +153,11 @@ input:focus {
   max-width: 480px;
   width: 100%;
   border-radius: 1.25rem;
+  padding: 2rem;
+}
+
+.profile-info {
+  text-align: left;
 }
 
 .profile-identity{
