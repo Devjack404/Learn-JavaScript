@@ -28,7 +28,6 @@ findBtn.addEventListener('click', async ()=> {
   }
 
   const user = await ambilData();
-  // findBtn.textContent = "Mencari... ";
 
   if(user){
     if(inputValue === user.login || Number(inputValue) === user.id){

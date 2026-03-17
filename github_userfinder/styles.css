@@ -152,6 +152,7 @@ input:focus {
   gap: 1.5rem; 
   max-width: 480px;
   width: 100%;
+  border-radius: 1.25rem;
 }
 
 .profile-identity{
