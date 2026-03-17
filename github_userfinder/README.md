@@ -1,13 +1,8 @@
 # 🔎 GitHub User Finder
 
 Simple web application to search GitHub users using the GitHub API.  
-You can find a user by **username or ID** and display their profile information.
-
----
-
-## Preview
-
-<img src="./preview.png" alt="GitHub User Finder Preview" width="800">
+You can find a user by **username** and display their profile information.
+the design i use Claude.ai.... this 25% vibe code.
 
 ---
 

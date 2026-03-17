@@ -4,52 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github User Finder</title>
-  <link rel="stylesheet" type="" href="styles.css"> 
+  <link rel="stylesheet" type="text/css" href="styles.css"> 
 </head>
 
-<!-- Header -->
-<header>
-  <h1>Github User Finder</h1>
-</header>
-
-<!-- Body -->
 <body>
-  <div class="container">
-    <label for="name">Account Name :</label>
-    <input type="text" id="input" placeholder="Enter Your User Name...">
-    <button type="button" id='findBtn'>Find Now</button>
-  </div> 
 
-  <!-- profile card -->
+  <header>
+    <h1>Github User Finder</h1>
+  </header>
+
+  <div class="container">
+    <label for="input">Account Name</label>
+    <div class="input-row">
+      <input type="text" id="input" placeholder="Enter username...">
+      <button type="button" id="findBtn">Find Now</button>
+    </div>
+  </div>
+
   <div class="profile-card">
     <div class="profile-identity">
-      <img class="photo" alt="foto-avatar" style="width : 100px; border-radius: 100%;">
+      <img class="photo" alt="foto-avatar">
       <div class="profile-info">
-       <h2 class="username">Username</h2>
-       <p class="nameTag">@Username Tag</p>
-       <p class="bio">Bio User...</p>
-       <p></p>
+        <h2 class="username">Username</h2>
+        <p class="nameTag">@username</p>
+        <p class="bio">Bio User...</p>
       </div>
     </div>
 
-    <!-- porfile stats -->
-    <div>
+    <div class="profile-stats">
       <div class="stat">
-        <span class="stat-value">230K</span>
+        <span class="followers-value stat-value">0</span>
         <span class="stat-label">Followers</span>
       </div>
       <div class="stat">
-        <span class="stat-value">0</span>
+        <span class="following-value stat-value">0</span>
         <span class="stat-label">Following</span>
+      </div>
+      <div class="stat">
+        <span class="repos-value stat-value">0</span>
+        <span class="stat-label">Repos</span>
       </div>
     </div>
 
-    <!-- profile Meta -->
     <div class="profile-meta">
-      <p class="live">📍 Portland, OR</p>
+      <p class="location-user"> Location</p>
+      <p class="joined"> Joined</p>
     </div>
   </div>
- 
-    <script src="script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
