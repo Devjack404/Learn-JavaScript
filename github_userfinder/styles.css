@@ -237,6 +237,34 @@ input:focus {
   margin-top: 0.3rem;
 }
 
+.link-account {
+  position: relative;
+  display: inline-block;
+  align-self: flex-start;
+  color: var(--accent-hi);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.link-account::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c084fc, #e879f9);
+  transition: width 0.3s ease;
+}
+
+.link-account:hover::after {
+  width: 100%;
+}
+
+
 /* Stats */
 .profile-stats {
   display: grid;
@@ -291,6 +319,8 @@ input:focus {
   letter-spacing: 0.03em;
   line-height: 1.5;
 }
+
+
 
 /* Responsive */
 @media (max-width: 480px) {

@@ -9,6 +9,7 @@ const followingValue = document.querySelector('.following-value');
 const reposValue = document.querySelector('.repos-value');
 const location_user = document.querySelector('.location-user');
 const joined = document.querySelector('.joined');
+const link_account = document.querySelector('.link-account');
 
 function formatNumber(n) {
   if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
@@ -42,7 +43,7 @@ findBtn.addEventListener('click', async () => {
   }
 
   findBtn.textContent = 'Mencari...';
-  const user = await ambilData(inputValue);
+  let user = await ambilData(inputValue);
 
   if (user) {
     photo.src = user.avatar_url;
@@ -60,3 +61,17 @@ findBtn.addEventListener('click', async () => {
     findBtn.textContent = 'Find Now';
   }
 });
+
+
+link_account.addEventListener('click', async () => {
+  let inputValue = input.value.trim();
+  let user = await ambilData(inputValue);
+
+  if(user){
+    window.open(`${user.html_url}`, "_blank")
+  }
+  else{
+    console.log('tidak dapat membuka link...')
+  }
+
+})
