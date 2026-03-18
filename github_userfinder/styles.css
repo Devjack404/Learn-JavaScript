@@ -27,8 +27,8 @@ body {
   background-image:
     radial-gradient(ellipse 90% 55% at 50% -5%, #1e0840 0%, transparent 65%),
     radial-gradient(ellipse 50% 50% at 85% 90%, #120430 0%, transparent 55%),
-    repeating-linear-gradient(0deg,   transparent, transparent 72px, rgba(148,60,180,0.03) 72px, rgba(148,60,180,0.03) 73px),
-    repeating-linear-gradient(90deg,  transparent, transparent 72px, rgba(148,60,180,0.03) 72px, rgba(148,60,180,0.03) 73px);
+    repeating-linear-gradient(0deg,   transparent, transparent 72px, rgba(148,60,180,0.05) 72px, rgba(148,60,180,0.03) 73px),
+    repeating-linear-gradient(90deg,  transparent, transparent 72px, rgba(148,60,180,0.05) 72px, rgba(148,60,180,0.03) 73px);
   font-family: var(--mono);
   color: var(--text);
   display: flex;
