@@ -10,6 +10,7 @@ const reposValue = document.querySelector('.repos-value');
 const location_user = document.querySelector('.location-user');
 const joined = document.querySelector('.joined');
 const link_account = document.querySelector('.link-account');
+const contributionGraph = document.getElementById('contributionGraph');
 
 function formatNumber(n) {
   if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
@@ -55,10 +56,18 @@ findBtn.addEventListener('click', async () => {
     reposValue.textContent = user.public_repos;
     location_user.textContent = user.location || 'location is not available';
     joined.textContent = `Joined ${formatDate(user.created_at)}`;
+
+    const graphUrl = `https://github-readme-stats.vercel.app/api?username=${user.login}&show_icons=true&theme=default&count_private=true&include_all_commits=true&bg_color=24292e&color=ffffff&icon_color=0366d6`;
+    contributionGraph.src = graphUrl;
+    contributionGraph.style.display = 'block';
+
+
   } else {
     alert(`User "${inputValue}" tidak ditemukan.`);
     findBtn.textContent = 'Find Now';
   }
+  
+
 
   findBtn.textContent = 'Find Now';
 });
