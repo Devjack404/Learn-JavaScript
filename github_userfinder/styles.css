@@ -264,6 +264,31 @@ input:focus {
   width: 100%;
 }
 
+/* Container untuk bagian kontribusi */
+.profile-contributions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.profile-contributions h3 {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Memaksa gambar grafik menjadi responsif */
+#contributionGraph {
+  width: 100%; 
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 0.8rem; 
+  object-fit: contain; 
+  display: block;
+}
 
 /* Stats */
 .profile-stats {
@@ -369,4 +394,5 @@ input:focus {
     justify-content: center;
     text-align: center;
   }
+
 }
