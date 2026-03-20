@@ -395,4 +395,8 @@ input:focus {
     text-align: center;
   }
 
+  .link-account{
+    align-self: center;
+  }
+
 }

@@ -11,6 +11,7 @@ const location_user = document.querySelector('.location-user');
 const joined = document.querySelector('.joined');
 const link_account = document.querySelector('.link-account');
 const contributionGraph = document.getElementById('contributionGraph');
+let currentUser = null;
 
 function formatNumber(n) {
   if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
@@ -35,18 +36,20 @@ async function ambilData(inputValue) {
   }
 }
 
-findBtn.addEventListener('click', async () => {
-  let inputValue = input.value.trim();
 
+findBtn.addEventListener('click', async () => {
+  const inputValue = input.value.trim();
+  
   if (!inputValue) {
     alert('Input Tidak Boleh Kosong!');
     return;
   }
-
+  
   findBtn.textContent = 'Mencari...';
-  let user = await ambilData(inputValue);
+  const user = await ambilData(inputValue);
 
   if (user) {
+    currentUser = user;
     photo.src = user.avatar_url;
     username.textContent = user.login;
     nameTag.textContent = `@${user.name || user.login}`;
@@ -73,12 +76,9 @@ findBtn.addEventListener('click', async () => {
 });
 
 
-link_account.addEventListener('click', async () => {
-  let inputValue = input.value.trim();
-  let user = await ambilData(inputValue);
-
-  if(user){
-    window.open(`${user.html_url}`, "_blank")
+link_account.addEventListener('click', () => {
+  if(currentUser){
+    window.open(`${currentUser.html_url}`, "_blank")
   }
   else{
     alert('tidak dapat membuka link...')
