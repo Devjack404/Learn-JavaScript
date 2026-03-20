@@ -11,6 +11,7 @@ const location_user = document.querySelector('.location-user');
 const joined = document.querySelector('.joined');
 const link_account = document.querySelector('.link-account');
 const contributionGraph = document.getElementById('contributionGraph');
+const profileCard = document.querySelector('.profile-card');
 let currentUser = null;
 
 function formatNumber(n) {
@@ -49,6 +50,7 @@ findBtn.addEventListener('click', async () => {
   const user = await ambilData(inputValue);
 
   if (user) {
+    profileCard.style.display = "block";
     currentUser = user;
     photo.src = user.avatar_url;
     username.textContent = user.login;
