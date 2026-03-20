@@ -66,16 +66,12 @@ findBtn.addEventListener('click', async () => {
 
     const graphUrl = `https://github-readme-stats.vercel.app/api?username=${user.login}&show_icons=true&count_private=true&include_all_commits=true&bg_color=08091a&title_color=c760b0&text_color=f0e6ff&icon_color=e491c9&hide_border=true`;
     contributionGraph.src = graphUrl;
-    
-
-
+  
   } else {
     alert(`User "${inputValue}" tidak ditemukan.`);
     findBtn.textContent = 'Find Now';
   }
   
-
-
   findBtn.textContent = 'Find Now';
 });
 
@@ -88,7 +84,11 @@ link_account.addEventListener('click', () => {
     alert('tidak dapat membuka link...')
   }
 
-})
+});
 
 
-
+input.addEventListener('keydown', async(enter) =>{
+  if(enter.key === "Enter"){
+    findBtn.click()
+  }
+});
