@@ -14,6 +14,8 @@ const contributionGraph = document.getElementById('contributionGraph');
 const profileCard = document.querySelector('.profile-card');
 let currentUser = null;
 
+profileCard.style.display = "none";
+
 function formatNumber(n) {
   if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
   return n;
@@ -50,7 +52,7 @@ findBtn.addEventListener('click', async () => {
   const user = await ambilData(inputValue);
 
   if (user) {
-    profileCard.style.display = "block";
+    profileCard.style.display = "flex";
     currentUser = user;
     photo.src = user.avatar_url;
     username.textContent = user.login;

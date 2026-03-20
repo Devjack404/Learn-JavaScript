@@ -169,7 +169,6 @@ input:focus {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 2.25rem 2rem;
-  display: flex;
   flex-direction: column;
   gap: 2rem;
   backdrop-filter: blur(12px);
