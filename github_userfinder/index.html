@@ -17,6 +17,8 @@
     </div>
   </div>
 
+
+  <!-- PROFILE CARD -->
   <div class="profile-card">
     <div class="profile-header">
       <label for="chs">Choose</label>
@@ -62,6 +64,62 @@
       <p class="location-user"> Location</p>
       <p class="joined"> Joined</p>
     </div>
+  </div>
+
+
+  <!-- TOP REPOSITORY CARD -->
+  <div class="repository-card">
+    <div class="profile-header">
+      <label for="chs-repo">View</label>
+      <select class="profile-selection-page" id="chs-repo">
+        <option value="profile">Profile</option>
+        <option value="repos" selected>Top Repository</option>
+      </select>
+    </div>
+  
+    <!-- MINI IDENTITY -->
+    <div class="profile-identity">
+      <div class="profile-info">
+        <h2 class="username">Username</h2>
+        <p class="nameTag">@username</p>
+        <p class="bio">Bio User...</p>
+        <a class="link-account">Visit Profile
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 1rem;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  
+    <!-- STATS -->
+    <div class="profile-stats">
+      <div class="stat">
+        <span class="followers-value stat-value">0</span>
+        <span class="stat-label">Followers</span>
+      </div>
+      <div class="stat">
+        <span class="following-value stat-value">0</span>
+        <span class="stat-label">Following</span>
+      </div>
+      <div class="stat">
+        <span class="repos-value stat-value">0</span>
+        <span class="stat-label">Repos</span>
+      </div>
+    </div>
+  
+    <!-- REPO LIST -->
+    <div class="section-label">Top Repositories</div>
+  
+    <div class="repo-list">
+      <!-- Diisi oleh JavaScript -->
+    </div>
+  
+    <!-- META FOOTER -->
+    <div class="profile-meta">
+      <p class="location-user">Location</p>
+      <p class="joined">Joined</p>
+    </div>
+  
   </div>
 
   <script type="module" src="script.js"></script>
