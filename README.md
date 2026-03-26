@@ -22,6 +22,7 @@ project mulai dari dasar hingga sulit menurut saya pribadi. Diusahakan update te
 4. Mini Shoping Cart
 5. Popup Box
 6. Rock Paper Scissors Game
+7. dst...
 
 ## Kenapa Repo ini di buat ? 🎩
 ```bash
