@@ -1,3 +1,4 @@
+
 const findBtn = document.getElementById('findBtn');
 const input = document.getElementById('input');
 const photo = document.querySelector('.photo');
@@ -12,21 +13,26 @@ const joined = document.querySelector('.joined');
 const link_account = document.querySelector('.link-account');
 const contributionGraph = document.getElementById('contributionGraph');
 const profileCard = document.querySelector('.profile-card');
+const profilePage = document.querySelector('.profile-page');
 let currentUser = null;
 
 profileCard.style.display = "none";
 
+// function format number > 1000 == K
 function formatNumber(n) {
   if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
   return n;
 }
 
+// function format Date
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-US', {
     month: 'short', day: 'numeric', year: 'numeric'
   });
 }
 
+
+// function fetch data API 
 async function ambilData(inputValue) {
   try {
     const response = await fetch(`https://api.github.com/users/${inputValue}`);
@@ -39,7 +45,7 @@ async function ambilData(inputValue) {
   }
 }
 
-
+// function click findbtn 
 findBtn.addEventListener('click', async () => {
   const inputValue = input.value.trim();
   
@@ -56,7 +62,7 @@ findBtn.addEventListener('click', async () => {
     currentUser = user;
     photo.src = user.avatar_url;
     username.textContent = user.login;
-    nameTag.textContent = `@${user.name || user.login}`;
+    nameTag.textContent = `@${user.login}`;
     bio.textContent = user.bio || 'No bio provided.';
     followersValue.textContent = formatNumber(user.followers);
     followingValue.textContent = formatNumber(user.following);
@@ -69,13 +75,12 @@ findBtn.addEventListener('click', async () => {
   
   } else {
     alert(`User "${inputValue}" tidak ditemukan.`);
-    findBtn.textContent = 'Find Now';
   }
   
   findBtn.textContent = 'Find Now';
 });
 
-
+// function link_account open new tab 
 link_account.addEventListener('click', () => {
   if(currentUser){
     window.open(`${currentUser.html_url}`, "_blank")
@@ -83,11 +88,10 @@ link_account.addEventListener('click', () => {
   else{
     alert('tidak dapat membuka link...')
   }
-
 });
 
-
-input.addEventListener('keydown', async(enter) =>{
+// function key "Enter" search input 
+input.addEventListener('keydown', (enter) =>{
   if(enter.key === "Enter"){
     findBtn.click()
   }

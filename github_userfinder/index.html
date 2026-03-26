@@ -7,12 +7,8 @@
   <link rel="stylesheet" type="text/css" href="styles.css"> 
 </head>
 
-<body>
-
-  <header>
-    <h1>Github User Finder</h1>
-  </header>
-
+<body> 
+  <h1>Git User Finder</h1>
   <div class="container">
     <label for="input">Account Name</label>
     <div class="input-row">
@@ -22,6 +18,14 @@
   </div>
 
   <div class="profile-card">
+    <div class="profile-header">
+      <label for="chs">Choose</label>
+      <select class="profile-selection-page" name="chs" id="chs">
+        <option class="profile-page">Profile</option>
+        <option class="repo-page">Top Repository</option>
+      </select>
+    </div>
+
     <div class="profile-identity">
       <img class="photo" src="https://static.thenounproject.com/png/profile-icon-icon-638636-512.png" alt="foto-avatar">
       <div class="profile-info">
