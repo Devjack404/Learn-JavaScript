@@ -2,7 +2,7 @@
 
 Simple web application to search GitHub users using the GitHub API.  
 You can find a user by **username** and display their profile information.
-the design i use Claude.ai.... this 25% vibe code.
+the design i use Claude.ai.
 
 ---
 

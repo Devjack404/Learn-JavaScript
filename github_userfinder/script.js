@@ -1,4 +1,4 @@
-
+// Variables for DOM in html
 const findBtn = document.getElementById('findBtn');
 const input = document.getElementById('input');
 const photo = document.querySelector('.photo');
