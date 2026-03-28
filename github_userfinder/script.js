@@ -16,7 +16,12 @@ const profileCard = document.querySelector('.profile-card');
 const profilePage = document.querySelector('.profile-page');
 let currentUser = null;
 
+// Variables for DOM Repo Page
+const repoSelect = document.getElementById("chs");
+const repoCard = document.querySelector(".repository-card");
+
 profileCard.style.display = "none";
+repoCard.style.display ="none"
 
 // function format number > 1000 == K
 function formatNumber(n) {
@@ -94,5 +99,17 @@ link_account.addEventListener('click', () => {
 input.addEventListener('keydown', (enter) =>{
   if(enter.key === "Enter"){
     findBtn.click()
+  }
+});
+
+// function change page in pro/repocard
+repoSelect.addEventListener('change', () => {
+  if (repoSelect.value === 'repos'){
+    repoCard.style.display = 'flex';
+    profileCard.style.display = 'none';
+  } 
+  else if (repoSelect.value === 'profile'){
+    repoCard.style.display = 'none';
+    profileCard.style.display = 'flex';
   }
 });

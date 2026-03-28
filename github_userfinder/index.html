@@ -24,8 +24,8 @@
     <div class="profile-header">
       <label for="chs">Choose</label>
       <select class="profile-selection-page" name="chs" id="chs">
-        <option class="profile-page">Profile</option>
-        <option class="repo-page">Top Repository</option>
+        <option value="profile" class="profile-page" selected>Profile</option>
+        <option value="repos" class="repo-page">Top Repository</option>
       </select>
     </div>
 
@@ -72,7 +72,7 @@
   <div class="repository-card">
     <div class="profile-header">
       <label for="chs-repo">View</label>
-      <select class="profile-selection-page" id="chs-repo">
+      <select class="profile-selection-page" id="chs">
         <option value="profile">Profile</option>
         <option value="repos" selected>Top Repository</option>
       </select>
@@ -114,7 +114,7 @@
     <div class="repo-list">
       <!-- Diisi oleh JavaScript -->
     </div>
-  
+    
     <!-- META FOOTER -->
     <div class="profile-meta">
       <p class="location-user">Location</p>
