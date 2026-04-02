@@ -17,7 +17,8 @@ const profilePage = document.querySelector('.profile-page');
 let currentUser = null;
 
 // Variables for DOM Repo Page
-const repoSelect = document.getElementById("chs");
+const selectPageProfile = document.getElementById("chs");
+const selectPageRepo = document.getElementById("chs-repo");
 const repoCard = document.querySelector(".repository-card");
 
 profileCard.style.display = "none";
@@ -102,14 +103,27 @@ input.addEventListener('keydown', (enter) =>{
   }
 });
 
+
 // function change page in pro/repocard
-repoSelect.addEventListener('change', () => {
-  if (repoSelect.value === 'repos'){
+function changePage(value) {
+  if (value === 'repos'){
     repoCard.style.display = 'flex';
     profileCard.style.display = 'none';
   } 
-  else if (repoSelect.value === 'profile'){
+  else if (value === 'profile'){
     repoCard.style.display = 'none';
     profileCard.style.display = 'flex';
   }
+
+  selectPageProfile.value = value;
+  selectPageRepo.value = value;
+}
+
+selectPageProfile.addEventListener('change', () => {
+  changePage(selectPageProfile.value);
 });
+
+selectPageRepo.addEventListener('change', () => {
+  changePage(selectPageRepo.value);
+});
+
