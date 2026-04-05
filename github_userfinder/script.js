@@ -37,6 +37,7 @@ const joinedRepo = repoCard.querySelector('.joined');
 // Repo list container
 const repoList = document.querySelector('.repo-list');
 
+// intial hide page cards
 profileCard.style.display = "none";
 repoCard.style.display = "none";
 
@@ -184,3 +185,5 @@ selectPageProfile.addEventListener('change', () => {
 selectPageRepo.addEventListener('change', () => {
   changePage(selectPageRepo.value);
 });
+
+

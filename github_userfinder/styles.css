@@ -161,6 +161,17 @@ input:focus {
   box-shadow: 0 1px 8px var(--glow);
 }
 
+/* Dropdown Menu */
+#chs-repo {
+  position: absolute;
+  top: 2.25rem;
+  right: 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0;
+}
+
 /*Profile Card */
 .profile-card {
   width: 100%;
@@ -534,3 +545,5 @@ input:focus {
   border-radius: 50%;
   flex-shrink: 0;
 }
+
+

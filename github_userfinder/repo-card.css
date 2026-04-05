@@ -1,0 +1,138 @@
+/* Profile Card */
+.repository-card {
+  width: 100%;
+  max-width: 680px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.25rem 2rem;
+  flex-direction: column;
+  gap: 2rem;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 0 1px rgba(180,100,240,0.08),
+    0 12px 40px rgba(100,20,140,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.repository-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(180,100,240,0.06) 0%, transparent 50%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Identity — disesuaikan dari .repository-identity → .profile-identity */
+.profile-identity {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.photo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 2px solid var(--border-hi);
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 0 24px var(--glow), 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* disesuaikan dari .repository-info → .profile-info */
+.profile-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+/* .username-repo sudah cocok */
+.username-repo {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--text);
+  line-height: 1.1;
+}
+
+/* disesuaikan dari .nameTag → .nameTag-repo */
+.nameTag-repo {
+  font-size: 0.75rem;
+  color: var(--accent-hi);
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+/* disesuaikan dari .bio → .bio-repo */
+.bio-repo {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-top: 0.3rem;
+}
+
+/* disesuaikan dari .link-account → .link-account-repo */
+.link-account-repo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  align-self: flex-start;
+  color: var(--accent-hi);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.link-account-repo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c084fc, #e879f9);
+  transition: width 0.3s ease;
+}
+
+.link-account-repo:hover::after {
+  width: 100%;
+}
+
+
+/* dropDown Menu */
+#chs{
+  color: var(--accent-hi);
+  position: absolute;
+  top: 2.25rem;
+  right: 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+#page-selection-dropdown {
+  position: absolute;
+  top: 2.25rem;
+  right: 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 10;
+
+}
