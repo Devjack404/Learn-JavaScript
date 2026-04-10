@@ -123,7 +123,7 @@ findBtn.addEventListener('click', async () => {
     reposValue.textContent = user.public_repos;
     location_user.textContent = user.location || 'Location is not available';
     joined.textContent = `Joined ${formatDate(user.created_at)}`;
-    contributionGraph.src = `https://github-readme-stats.vercel.app/api?username=${user.login}&show_icons=true&count_private=true&include_all_commits=true&bg_color=08091a&title_color=c760b0&text_color=f0e6ff&icon_color=e491c9&hide_border=true`;
+    // contributionGraph.src = `https://github-readme-stats.vercel.app/api?username=${user.login}&show_icons=true&count_private=true&include_all_commits=true&bg_color=08091a&title_color=c760b0&text_color=f0e6ff&icon_color=e491c9&hide_border=true`;
 
     // Sync repo-card
     usernameRepo.textContent = user.login;
