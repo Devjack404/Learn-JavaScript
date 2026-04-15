@@ -162,7 +162,9 @@ input:focus {
 }
 
 /* Dropdown Menu */
+#chs,
 #chs-repo {
+  color: var(--accent-hi);
   position: absolute;
   top: 2.25rem;
   right: 2rem;
@@ -170,6 +172,7 @@ input:focus {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 0.5rem 0;
+  z-index: 10;
 }
 
 /*Profile Card */
@@ -249,7 +252,9 @@ input:focus {
 
 .link-account {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   align-self: flex-start;
   color: var(--accent-hi);
   font-size: 1rem;
@@ -257,6 +262,11 @@ input:focus {
   cursor: pointer;
   text-decoration: none;
   transition: color 0.25s ease;
+
+  /* reset default button style */
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .link-account::after {

@@ -136,3 +136,84 @@
   z-index: 10;
 
 }
+
+/* Repo card specific styles only (scoped) */
+
+/* Identity in repository card */
+.repository-card .profile-identity {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.repository-card .profile-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.repository-card .username-repo {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.repository-card .nameTag-repo {
+  font-size: 0.75rem;
+  color: var(--accent-hi);
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.repository-card .bio-repo {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-top: 0.3rem;
+}
+
+.repository-card .link-account-repo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  align-self: flex-start;
+  color: var(--accent-hi);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.repository-card .link-account-repo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c084fc, #e879f9);
+  transition: width 0.3s ease;
+}
+
+.repository-card .link-account-repo:hover::after {
+  width: 100%;
+}
+
+/* Dropdown repo page */
+#chs-repo {
+  color: var(--accent-hi);
+  position: absolute;
+  top: 2.25rem;
+  right: 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0;
+  z-index: 10;
+}
