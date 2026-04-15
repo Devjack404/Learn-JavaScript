@@ -79,6 +79,8 @@
 
 /* disesuaikan dari .link-account → .link-account-repo */
 .link-account-repo {
+  border: none;
+  background-color: transparent;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -93,7 +95,6 @@
 }
 
 .link-account-repo::after {
-  content: '';
   position: absolute;
   left: 0;
   bottom: -3px;
