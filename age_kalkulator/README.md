@@ -16,7 +16,7 @@ This project is part of my **JavaScript learning journey** where I practice work
 
 ---
 
-## ✨ Features
+##  Features
 
 - 📅 Input date of birth
 - ⚡ Calculate age instantly

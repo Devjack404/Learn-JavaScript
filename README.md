@@ -1,32 +1,48 @@
-# Learn Java Script based on projects 🎓
-Repo ini saya gunakan untuk mendokumentasikan progress belajar Java Script based on projects... 
-project mulai dari dasar hingga sulit menurut saya pribadi. Diusahakan update terus seiring waktu.
+# Learn JavaScript Based on Projects 🎓
 
+This repository is used to document my learning progress in JavaScript through project-based practice.  
+The projects range from basic to advanced (based on my personal level).  
+I will keep updating it over time.
 
-## Tujuan 📌
-1. Menguasai fundamental Java Script
-2. Memahami dan bisa manipulasi DOM 
-3. Menerapkan dan melatih logika pemrograman dalam project yang ada
-4. melatih kebiasaan penggunaan version control pakai git & github
-5. Bisa dan siap menggunakan framework
+---
 
-## Tech Stack ⚒️
-- HTML5
-- CSS3
-- JavaScript(Vanilla JS)
+## 🎯 Goals
 
-## Daftar Projects 📃
-1. Program Angkot (WPU)
-2. Counter App
-3. Kalkulator
-4. Mini Shoping Cart
-5. Popup Box
-6. Rock Paper Scissors Game
-7. dst...
+- Master JavaScript fundamentals  
+- Understand and be able to manipulate the DOM  
+- Apply and improve programming logic through projects  
+- Build the habit of using version control with Git & GitHub  
+- Be ready to use frameworks  
 
-## Kenapa Repo ini di buat ? 🎩
-```bash
-"Discipline, Consistent, Stay Focus and Work Hard"
-```
-saya ingin melatih kebiasaan, konsistensi saya dan menambah portfolio.
+---
 
+## ⚒️ Tech Stack
+
+- HTML5  
+- CSS3  
+- JavaScript (Vanilla JS)  
+
+---
+
+## 📃 Project List
+
+- Program Angkot (WPU)  
+- Counter App  
+- Calculator  
+- Mini Shopping Cart  
+- Popup Box  
+- Rock Paper Scissors Game  
+- More coming soon...
+
+---
+
+## 🎩 Why This Repo Exists
+
+> **"Discipline, Consistency, Stay Focused, and Work Hard"**
+
+I created this repository to:
+- Build strong habits  
+- Stay consistent in learning  
+- Grow my portfolio  
+
+---
