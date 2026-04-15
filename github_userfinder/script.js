@@ -42,10 +42,10 @@ if (profileCard) profileCard.style.display = 'none';
 if (repoCard) repoCard.style.display = 'none';
 
 // function format number > 1000 == K
-function formatNumber(n) {
-  if (typeof n !== 'number') return '0';
-  if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
-  return String(n);
+function formatNumber(nums) {
+  if (typeof nums !== 'number') return '0';
+  if (nums >= 1000) return (nums / 1000).toFixed(1) + 'K';
+  return String(nums);
 }
 
 // function format Date
