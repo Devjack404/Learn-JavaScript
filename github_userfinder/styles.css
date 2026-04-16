@@ -177,6 +177,7 @@ input:focus {
 
 /*Profile Card */
 .profile-card {
+  display: flex;
   width: 100%;
   max-width: 680px;
   background: var(--card);
@@ -424,6 +425,7 @@ input:focus {
 
 /* Repo Card */
 .repository-card {
+  display: flex;
   width: 100%;
   max-width: 680px;
   background: var(--card);

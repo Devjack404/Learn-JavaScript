@@ -3,5 +3,17 @@
     "livePreview.defaultPreviewPath": "/index.html",
     "cSpell.words": [
         "hellp"
-    ]
+    ],
+    "spellright.language": [],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "code-runner-output"
+    ],
+    "spellright.parserByClass": {
+        "code-runner-output": {
+            "parser": "code"
+        }
+    }
 }
