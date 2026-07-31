@@ -6,6 +6,7 @@
   <title>Github User Finder</title>
   <link rel="stylesheet" type="text/css" href="styles.css"> 
   <link rel="stylesheet" type="text/css" href="repo-card.css"> 
+  <link rel="stylesheet" type="text/css" href="drop-down.css"> 
 </head>
 
 <body>
@@ -22,13 +23,28 @@
 
   <!-- PROFILE CARD -->
   <div class="profile-card">
-    <div class="profile-header">
-      <label for="chs">View</label>
-      <select class="profile-selection-page" name="chs" id="chs">
-        <option value="profile" class="profile-page">Profile</option>
-        <option value="repos" class="repo-page">Top Repository</option>
-      </select>
+    <div class="custom-dropdown" id="myDropdownWrapper">
+      <!-- Tombol Trigger -->
+      <button class="custom-dropdown-btn" id="dropdownTrigger">
+        <span id="dropdownSelectedText">Pilih Tampilan</span>
+        <!-- Ikon Panah Bawah -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        </svg>
+      </button>
+
+      <!-- Menu Konten Dropdown -->
+      <div class="custom-dropdown-menu" id="dropdownMenu">
+        <button class="custom-dropdown-item active-item" onclick="selectOption(this, 'Profile')">
+          👤 Profile
+        </button>
+        <button class="custom-dropdown-item" onclick="selectOption(this, 'Top Repository')">
+          📁 Top Repository
+        </button>
+      </div>
+
     </div>
+    
 
     <!-- PROFILE MINI IDENTITY -->
     <div class="profile-identity">
@@ -132,5 +148,6 @@
   </div>
 
   <script type="module" src="script.js"></script>
+  <script src="dropdown.js"></script>
 </body>
 </html>
